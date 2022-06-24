@@ -1,0 +1,62 @@
+    1  git -version
+    2  git --version
+    3  pdw
+    4  pwd
+    5  ls -la
+    6  touch traspaso.txt
+    7  ls
+    8  ls -la
+    9  cp traspaso.txt archivodecopia.txt
+   10  ls- la
+   11  ls -la
+   12  nano traspaso.txt
+   13  cp traspaso.txt copiatraspaso.txt
+   14  cp traspaso.txt Semana3/ copiatraspaso.txt
+   15  cp traspaso.txt Semana3/copiatraspaso.txt
+   16  touch otro.txt
+   17  cp otro.txt semana3/
+   18  cd semana3/
+   19  ls
+   20  ls
+   21  ..
+   22  cd ..
+   23  ls
+   24  mv traspaso.txt semana3/
+   25  ls
+   26  cd semana3/
+   27  ls
+   28  cs ..
+   29  cd ..
+   30  mv otro.txt semana3/
+   31  cd semana3
+   32  ls
+   33  cd ..
+   34  ls
+   35  mv semana3/ semana2/
+   36  ls
+   37  cd semana2
+   38  ls
+   39  mv semana3/ CursoJava
+   40  cd ..
+   41  ls
+   42  ls
+   43  cd ..
+   44  cd CursoJava
+   45  ls
+   46  cd Semana2/
+   47  ls
+   48  mv CursoJava/ Semana3
+   49  ls
+   50  mv Semana3/ /c/CursoJava/
+   51  ls
+   52  cd ..
+   53  ls
+   54  clear
+   55  ls
+   56  cat copiatraspaso.txt
+   57  cd /d/
+   58  ls
+   59  cat photo_2021-10-08_11-36-41.jpg 
+   60  clear
+   61  cd /c/CursoJava
+   62  history > comandos.txt

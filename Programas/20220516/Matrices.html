@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices</title>
+    <script>
+        //Matrices, array o arreglo
+        //Conjunto de datos ordenados según su ingreso, separados por comas
+        //La primera posición de referencia es la posición 0
+        var matriz = [1, 2, 3, "a", "b", "c"];
+
+        console.log(matriz);
+        console.log("El tamaño de la matriz es " + matriz.length); //Length es la longitud o tamaño de la matriz
+
+        //NombreMatriz[n] para hacer referencia a uno de los elementos dentro de la matriz
+        console.log("El elemento almacenado en el espacio 3 de la matriz es: " + matriz[3]);
+
+        //Sobreescribiendo un valor dentro de la matriz
+        matriz[4] = 4;
+        console.log(matriz[4]);
+
+        //Si nombramos un elemento en un espacio no existente, crea el espacio
+        matriz[12] = "texto";
+        console.log(matriz);
+
+        //Acceder al último elemento de la matriz.
+        console.log(matriz[matriz.length - 1]);
+
+        console.clear(); //limpiar la consola
+
+        //Crear una matriz vacía, se dejan los corchetes en blanco.
+        var MatrizVacia = [];
+
+        //Para agregar elementos a la matriz vacía en la última posición
+        MatrizVacia[0] = 2;
+        MatrizVacia.push(4);
+        console.log(MatrizVacia);
+        MatrizVacia[12] = 17;
+        console.log(MatrizVacia);
+        MatrizVacia.push(14); //Al hacer un push, siempre añadirá ese dato al final del arreglo.
+        console.log(MatrizVacia);
+
+        //Eliminar el último elemento de la matriz
+        MatrizVacia.pop();
+        console.log(MatrizVacia);
+
+        /*como comparar si esta empty*/
+        if (MatrizVacia[3] == undefined) {
+            alert("La posicion 3 no esta definida")
+        }
+
+        //Guardar el último elemento antes de eliminarlo.
+        var ultimo = MatrizVacia.pop();
+
+        //Crear otra Matriz para guardar los elementos eliminados
+        var MatrizReserva = []
+        MatrizReserva.push = ultimo
+        console.log(MatrizReserva)
+
+        //Inserta elemento a la posición 0 y desplaza al resto
+        MatrizReserva.unshift(25);
+        console.log(MatrizReserva)
+        MatrizReserva.shift();
+        console.log(MatrizReserva);
+
+        //Buscar la posición de una variable
+        var posicion = MatrizVacia.indexOf(17);
+        console.log(MatrizVacia);
+
+        //Creando nuevamente una matriz larga
+        var Matriz = [1, 2, 3, "a", "b", "c"];
+        Matriz.splice(0, 2)
+        console.log(Matriz)
+
+        //Crear una copia de respaldo de una matriz
+        var MatrizCopia = Matriz.slice();
+        console.log(MatrizCopia)
+
+        //Forma incorrecta de copiar una matriz
+        //var matrizcopia = matriz
+
+        //For para recorrer una matriz
+        for (var index = 0; index < MatrizCopia.length; index++) {
+
+        }
+
+        //index++ ; index+=1 ; index= index + 1;
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

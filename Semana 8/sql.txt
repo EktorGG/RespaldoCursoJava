@@ -1,0 +1,25 @@
+INSERT INTO “Nombre_Tabla” (“columna1”, “columna2”, etc)
+VALUES (“Dato1”, “Dato2”, etc);
+
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Suzuki","VMJG34","Rojo",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Suzuki","UIG34","Amarillo",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Suzuki","TYer23","Azul",240);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Suzuki","OPBH3","Blanco",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Suzuki","VBS53","Negro",200);
+
+
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Nissan","VHJG34","Rojo",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Nissan","SKG34","Amarillo",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Nissan","Neer23","Azul",240);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Nissan","SXBH3","Rojo",220);
+INSERT INTO autos (modelo,marca,color,velocidad_max)
+VALUES ("Nissan","GES53","Rojo",200);

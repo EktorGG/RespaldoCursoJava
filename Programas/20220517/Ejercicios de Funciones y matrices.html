@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios de Funciones y Matrices</title>
+
+
+
+    <script>
+        //Ejercicio: Escribe una función que devuelve una matriz con todos los números del 1 al 255
+
+        function CrearMatriz(a, b) { //Definimos la función
+            var matriz = []; //Creamos la matriz vacía para rellenar
+            for (let i = a; i <= b; i++) { //Creamos el ciclo para recorrer los datos desde el punto a al b
+                matriz.push(i); //Metemos cada ronda del ciclo for en la matriz creada
+            }
+            return matriz; //Retornamos la matriz rellena
+        }
+        console.log(CrearMatriz(1, 255)); //Llamamos a la función
+        var Contenedor = (CrearMatriz(1, 255)); //Contenemos el resultado de la función en una variable nueva
+        console.log(Contenedor); //Comprobamos la variable creado
+    </script>
+
+
+
+    <script>
+        //Ejercicio: Suma de numeros pares entre 2 números
+
+        function SumarPares(a, b) { //Definimos la función
+            let SumaParcial = 0; //Creamos la variable temporal para almacenar los números pares
+            if (a < b) { //Establecemos la condición para inicializar
+                for (let i = a; i <= b; i++) { //mientras a sea menor que b, el ciclo correrá y a se aumentará en 1 cada vez
+                    if (i % 2 == 0) { //Si a es número par...
+                        SumaParcial = SumaParcial + i; //Se suman los pares
+                    }
+                }
+                return SumaParcial; //La función retorna el resultado de la función              
+            } else { //Si la condición para inicializar, no se cumple, mostrará el mensaje de abajo
+                console.log("Vuelva a llamar a la función colocando como primer parámetro el número menor");
+            }
+        }
+        console.log(SumarPares(1, 1000)); //Llamamos a la función
+    </script>
+
+
+
+    <script>
+        //Ejercicio: Dado un valor Y, escribe una función que toma un array y retorna la cantidad de los valores mayores a Y
+
+        var Y = parseInt(prompt("Ingrese un número para inicializar en la variable Y")) //paseInt se encarga de transformar el valor a número, que antes era string
+        var matriz = [1, 2, 3, 50, 8, 7, 90, 64, 30]
+
+        function NumerosMayores(matriz, Y) { //Definimos la función con una matriz y el valor a solicitar
+            let numerosMayores = 0; //Definir e inicializar un contador de números mayores como variable temporal
+            for (let i = 0; i < matriz.length; i++) { //Recorrer el array dado completamente
+                if (matriz[i] > Y) { //Crear la condición para aumentar la variable
+                    numerosMayores = numerosMayores + 1; //Aumentar la variable sumandola con la nueva que cumpla la condición
+                }
+            }
+            return numerosMayores; //Retornar cantidad final de veces que hay números mayores a la cantidad dada por el usuario
+        }
+        console.log(NumerosMayores(matriz, Y)); //Llamamos a la función
+    </script>
+
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de "Document.write"</title>
+    <script>
+        //Solicitar datos de usuario 1
+        var nombre1 = prompt("Usuario 1, ingresa tu nombre");
+        var apellido1 = prompt("ingresa tu apellido");
+        var edad1 = prompt("Ingresa tu edad");
+        var hobie1 = prompt("ingresa tu hobie");
+        //Bienvenida
+        document.write("_____________")
+        document.write("    Menú     ")
+        document.write("_____________")
+        document.write("<br>")
+            //Mostrar datos de usuario 1 en pantalla
+        document.write("   Usuario 1: ")
+        document.write(nombre1);
+        document.write(" ");
+        document.write(apellido1);
+        document.write(", ");
+        document.write(edad1 + " años");
+        document.write(". ");
+        document.write("Su hobie es: " + hobie1);
+        document.write(".");
+        document.write("<br>");
+        document.write("    Usuario 2: ");
+        //Solicitar datos de usuario 2
+        var nombre2 = prompt(" Usuario 2, ingresa tu nombre");
+        var apellido2 = prompt("ingresa tu apellido");
+        var edad2 = prompt("Ingresa tu edad");
+        var hobie2 = prompt("ingresa tu hobie");
+        //Mostrar datos de usuario 2 en pantalla
+        document.write(nombre2);
+        document.write(" ");
+        document.write(apellido2);
+        document.write(", ");
+        document.write(edad2 + " años");
+        document.write(". ");
+        document.write("Su hobie es: " + hobie2);
+        document.write(".");
+        //Despedida
+        document.write("<br>")
+        document.write("_____________")
+        document.write("     Fin     ")
+        document.write("_____________")
+    </script>
+</head>
+
+<body></body>
+
+</html>

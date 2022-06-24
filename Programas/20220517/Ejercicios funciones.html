@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+    <script>
+        //Funcion 1
+        function uno(b) {
+            for (var i = 0; i < 10; i++) {
+                console.log(i);
+            }
+            return i; //Return es el fin de la función, nada se ejecuta debajo de ella.
+        }
+        console.log(uno(3));
+        console.log(10)
+            //El valor de retorno es enviado donde se realiza el llamado a la función, y reemplaza al llamado
+
+
+        //Funcion 2
+        function dos() {
+            for (var i = 0; i < 10; i++) {
+                i = i + 2;
+                console.log(i);
+            }
+        }
+        dos(); //llamado a la función
+
+        //Funcion 3
+        function tres(b, c) {
+            for (var i = b; i < c; i++) {
+                console.log(i);
+            }
+            return b * c;
+        }
+        tres(0, 10);
+        console.log(tres(0, 10));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+package com.generation.f20220523;
+
+public class CalculoPromedio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int NotasdeRamo = 12;
+		Integer[] notas = {20, 51, 67, 88, 25, 100, 40, 50, 70, 70, 100, 100};
+		System.out.println(notas);
+	}
+
+}

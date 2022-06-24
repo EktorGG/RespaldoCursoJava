@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220516 - FUNCIONES
+    </title>
+    <script>
+        //Funciones
+        function suma(numero1, numero2) {
+            if (numero1 != 4 && numero2 != 5) {
+                console.log("numero 1 es distinto a 4 y numero2 es distinto a 5");
+            } else {
+                console.log("alguna de las condiciones no se cumplen");
+                console.log("el numero1 es igual a 4 o el numero2 es igual a 5");
+            }
+            //Testeando con ||
+            if (numero1 == 4 || numero2 == 5) {
+                console.log("numero 1 es igual a 4 o numero2 es igual a 5");
+            } else {
+                console.log("numero 1 es distinto a 4 y numero2 es distinto a 5");
+            }
+        }
+        //llamando a la función
+        suma(2, 5);
+    </script>
+
+    <head>
