@@ -22,9 +22,14 @@
                     <form action="/auto/buscar" method="post">
                         <label for="marca">Marca:</label>
                         <input type="text" id="marca" name="marca">
+
                         <input type="submit" class="btn btn-primary">
                     </form>
                     <br>
+                    <!--Paginacion-->
+                    <c:forEach var="numeroPagina" begin="1" end="${totalPaginas}">
+                        <a href="/auto/pagina/${numeroPagina}">${numeroPagina}</a>
+                    </c:forEach>
                     <!--TABLA-->
                     <table class="table">
                         <thead>
@@ -38,7 +43,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <c:forEach var="auto" items="${autosCapturados}">
+                            <c:forEach var="auto" items="${autosCapturados.content}">
                                 <tr>
                                     <th>id</th>
                                     <th scope="row">${auto.id}</th>

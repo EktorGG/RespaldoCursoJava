@@ -2,6 +2,7 @@ package com.generationg1.hectorgomez.controllers;
 import java.util.List;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -9,8 +10,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
 import com.generationg1.hectorgomez.models.Auto;
 import com.generationg1.hectorgomez.services.AutoService;
+
 
 @Controller
 @RequestMapping("/auto") //Pagina x defecto
@@ -86,6 +90,29 @@ public class AutoController {
         autoService.eliminarPorId(id);
 
         return "redirect:/auto/mostrar";
+    }
 
-}
+    @PostMapping("/buscar")
+    public String buscar(@RequestParam(value="marca") String marca, Model model) { //Metodo "buscar" solicitará una marca para mostrar
+    
+    //obtener una lista de autos
+    List<Auto> listaAutos = autoService.buscarMarca(marca);
+    
+	//pasamos la lista de autos al jsp
+	model.addAttribute("autosCapturados", listaAutos);
+    return "mostrarAutos.jsp";
+    }
+
+    @RequestMapping("/pagina/{numeroPagina}")
+    public String paginarAutos(@PathVariable ("numeroPagina") int numeroPagina, Model model) {
+        //Las páginas o iterables siempre comienzan en el indice cero (0)
+        Page<Auto> listaAutos = autoService.paginarAutos(numeroPagina - 1);
+        
+        model.addAttribute("autosCapturados", listaAutos);
+        //Muestra el total de páginas calculando el total de elementos dividido en el LOTE
+        model.addAttribute("totalPaginas", listaAutos.getTotalPages());
+        
+        return "autosPaginados.jsp";
+    }
+    
 }
