@@ -1,5 +1,6 @@
 package com.generationg1.hectorgomez.models;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -8,6 +9,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
@@ -44,8 +48,16 @@ public class Usuario {
 
    //Relaciones OneToOne (1a1)
    @OneToOne(mappedBy ="usuario",cascade=CascadeType.ALL ,fetch=FetchType.LAZY) //CASCADE ES UNA RESTRICCION QUE IMPIDE ELIMINAR EL USUARIO SI NO SE HA ROTO LA RELACION CON LICENCIA
-   private Licencia licencia;
+    private Licencia licencia;
 
+    //Relaciones ManyToMany
+    @ManyToMany(fetch=FetchType.EAGER)
+    @JoinTable(
+        name="roles_usuarios", // Nombre de tabla relacional
+        joinColumns = @JoinColumn(name="usuario_id"), // Desde la entidad actual
+        inverseJoinColumns= @JoinColumn(name="rol_id") // La otra entidad o tabla
+    )
+    private List<Rol> roles; //Esta lista hace referencia a la columna foreanea
 
     //Constructor vacío
     public Usuario() {
